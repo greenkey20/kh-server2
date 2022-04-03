@@ -172,7 +172,17 @@
         </div>
     </div>
 
-    <!--'변경할 비밀번호 == 새 비밀번호 재입력'인지 확인하는 script 태그 필기 못함-->
+    <!--'변경할 비밀번호 == 새 비밀번호 재입력'인지 확인하는 script 태그 필기 못함 -> 2022.4.3(일) 13h55 추가-->
+    <script>
+    	function validatePwd() {
+    		if ($("input[name=updatePwd]").val() != $("input[name=checkPwd]").val()) {
+    			alert("재입력한 비밀번호가 일치하지 않습니다.")
+    			return false;
+    		}
+    		
+    		return true;
+    	}
+    </script>
 
     <!--2022.1.7(금) 17h 수업 실습 + 주말 숙제-->
     <!--The Modal = 회원 탈퇴용으로 쓸 (pop-up)modal -> id를 deleteMemForm으로 변경 cf. 강사님께서는 2022.1.10(월) 9h 수업시간에 id를 deleteForm으로 하심-->
